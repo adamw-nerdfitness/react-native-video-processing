@@ -232,7 +232,11 @@ public class Trimmer {
 
       promise.resolve(event);
     } finally {
-      retriever.release();
+      try {
+        retriever.release();
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
     }
   }
 
@@ -374,7 +378,11 @@ public class Trimmer {
       videoMetadata.putInt("bitrate", bitrate);
       return videoMetadata;
     } finally {
-      retriever.release();
+      try {
+        retriever.release();
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
     }
   }
 
@@ -592,7 +600,11 @@ public class Trimmer {
 
       promise.resolve(event);
     } finally {
-      retriever.release();
+      try {
+        retriever.release();
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
     }
   }
 
